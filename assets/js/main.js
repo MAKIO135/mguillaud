@@ -14,7 +14,7 @@
 		settings = {
 
 			// Parallax background effect?
-				parallax: true,
+				parallax: false,
 
 			// Parallax factor (lower = more intense, higher = less intense).
 				parallaxFactor: 20
@@ -70,20 +70,20 @@
 
 			if (settings.parallax) {
 
-				breakpoints.on('<=medium', function() {
+				// breakpoints.on('<=medium', function() {
 
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
+				// 	$window.off('scroll.strata_parallax');
+				// 	$header.css('background-position', '');
 
-				});
+				// });
 
 				breakpoints.on('>medium', function() {
 
-					$header.css('background-position', 'left 0px');
+					// $header.css('background-position', 'left 0px');
 
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
+					// $window.on('scroll.strata_parallax', function() {
+						// $header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+					// });
 
 				});
 
